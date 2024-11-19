@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    body {
+        background-color: #FFF5E1;
+    }
+
+    .custom-card {
+        background-color: #236D5E;
+        border-radius: 20px;
+        height: 60vh;
+        border-radius: 35px; /* Aumentar o arredondamento das bordas do cartão */
+    }
+
+    .footer-images {
+        position: fixed;
+        bottom: -1rem;
+        left: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        background-color: #FFF5E1; /* Match the background color */
+    }
+
+        .footer-images img {
+            width: 35vh;
+            height: auto;
+        }
+
+    .form-control-custom {
+        background-color: #E7C5C4; /* Nova cor de fundo */
+        border-radius: 35px;
+        height: 3.8rem;
+    }
+
+    .error-message {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<div style="position: absolute; top: 1rem; left: 1rem; z-index: 2;">
+    <img src="~/Img/Logo.png" alt="Logo" class="img-fluid" style="max-width: 25vh; height: auto;">
+</div>
+
+<div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
+    <h1 class="text-center">Login</h1>
+</div>
+
+<div class="container" style="position: relative; z-index: 1; margin-top: 2rem;">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-sm p-4 custom-card text-white">
+                <div class="card-body">
+                    <form method="post" action="/Auth/Login" enctype="multipart/form-data">
+                        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+
+                        {
+                            <div class="alert alert-danger error-message" role="alert">
+                                @ViewBag.ErrorMessage
+                            </div>
+                        }
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label fs-5 ms-3">Email</label>
+                            <input type="email" name="email" class="form-control form-control-lg form-control-custom" id="email" required placeholder="Digite seu email" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="senha" class="form-label fs-5 ms-3">Senha</label>
+                            <input type="password" name="senha" class="form-control form-control-lg form-control-custom" id="senha" required placeholder="Senha" />
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-5">
+                            <button type="submit" class="btn btn-primary btn-lg" style="border-radius: 50px; background-color: #C8003699; border: none;">Logar</button>
+                            <a href="/Auth/Register" class="btn btn-secondary btn-lg" style="border-radius: 50px; background-color: #C8003699; border: none;">Retornar ao cadastro</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-images">
+    <img src="~/Img/Grass1.png" alt="Footer Left" class="img-fluid">
+    <img src="~/Img/Grass2.png" alt="Footer Middle" class="img-fluid">
+    <img src="~/Img/Grass3.png" alt="Footer Right" class="img-fluid">
+    <img src="~/Img/Grass3.png" alt="Footer Right" class="img-fluid">
+    <img src="~/Img/Grass3.png" alt="Footer Right" class="img-fluid">
+    <img src="~/Img/Grass3.png" alt="Footer Right" class="img-fluid">
+</div>

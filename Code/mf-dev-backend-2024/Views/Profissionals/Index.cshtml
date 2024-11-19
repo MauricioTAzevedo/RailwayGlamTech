@@ -1,0 +1,112 @@
+﻿@model IEnumerable<mf_dev_backend_2024.Models.Profissional>
+
+@{
+    Layout = "~/Views/Shared/_LayoutMenuProfissional.cshtml";
+
+    ViewData["Title"] = "Index";
+    ViewData["HeaderLinkAction"] = "#secAgendamentos";
+    ViewData["HeaderLinkAction2"] = "#secServicos";
+    ViewData["HeaderLinkText"] = "Agendamentos";
+    ViewData["HeaderLinkText2"] = "Serviços Disponíveis";
+}
+
+<div class="container">
+    <section id="secAgendamentos">
+        <div class="divAgendamentos">
+            <div class="titleAgendamentos">
+                <h2>Bem Vindo(a)!</h2>
+            </div>
+
+            <div class="textAgendamentos">
+                <p>Olá! Tudo bem? Aqui estão os Agendamentos em aberto. Tenha uma ótima semana!</p>
+            </div>
+        </div>
+
+        <div class="titleTabela">
+            <h3>Agendamentos da Semana</h3>
+        </div>
+
+        <div class="divTabelaAg">
+            <table class="tabelaAg">
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                        <th>Local</th>
+                        <th>Cliente</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda-feira, 28/10/24</td>
+                        <td>11h ás 12h</td>
+                        <td>Rua Itamirim, 671, Bairro Alto Vera Cruz</td>
+                        <td>Elisabeth Gabriela </td>
+                        <td>R$ 20,00</td>
+                        <td>Em aberto</td>
+                    </tr>
+                    <tr>
+                        <td>Segunda-feira, 28/10/24</td>
+                        <td>11h ás 12h</td>
+                        <td>Rua Itamirim, 671, Bairro Alto Vera Cruz</td>
+                        <td>Elisabeth Gabriela </td>
+                        <td>R$ 20,00</td>
+                        <td>Em aberto</td>
+                    </tr>
+                    <tr>
+                        <td>Segunda-feira, 28/10/24</td>
+                        <td>11h ás 12h</td>
+                        <td>Rua Itamirim, 671, Bairro Alto Vera Cruz</td>
+                        <td>Elisabeth Gabriela </td>
+                        <td>R$ 20,00</td>
+                        <td>Em aberto</td>
+                    </tr>
+                    <tr>
+                        <td>Segunda-feira, 28/10/24</td>
+                        <td>11h ás 12h</td>
+                        <td>Rua Itamirim, 671, Bairro Alto Vera Cruz</td>
+                        <td>Elisabeth Gabriela </td>
+                        <td>R$ 20,00</td>
+                        <td>Em aberto</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Total de Atendimentos: 4</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <section id="secServicos">
+        <div class="divServicos">
+            <div class="titleServicos">
+                <h3>Serviços Disponíveis</h3>
+            </div>
+
+            <div class="servicosWrapper">
+                <div class="servico">
+                    <img src="~/img/imgHorarios.jpg" alt="Disponibilizar Horários" />
+                </div>
+
+                <div class="servico">
+                    <img src="~/img/imgFinanceiro.jpg" alt="Visualizar Faturamento" />
+                </div>
+
+                <div class="servico">
+                    <img src="~/img/imgEstoque.jpg" alt="Gerenciar Estoque" />
+                </div>
+
+                <div class="servico">
+                    <img src="~/img/imgHistorico.jpg" alt="Visualizar Histórico" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+

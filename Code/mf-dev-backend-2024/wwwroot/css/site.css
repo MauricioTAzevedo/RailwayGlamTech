@@ -1,0 +1,318 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #fff5e1;
+}
+
+h1, h2, h3 {
+    color: #0c1844;
+}
+
+/*HEADER*/
+.headerConteiner {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+}
+
+.headerWrapper {
+    display: grid;
+    grid-template-columns: 60% 30% 5%;
+}
+
+.divAncoras {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 40px 30px;
+    justify-items: end;
+}
+
+.divLogoPrincipal {
+    position: relative;
+    top: -45px;
+    left: -50px;
+}
+
+#logoPrincipal {
+    width: 200px;
+    height: 200px;
+}
+
+.divFotoPerfil {
+    position: relative;
+    top: 5%;
+    left: 40px;
+}
+
+#fotoPerfil {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    border-radius: 100%;
+}
+
+.divAncoras a {
+    color: #0c1844;
+    text-decoration: none;
+}
+
+    .divAncoras a:hover {
+        color: #c80036;
+    }
+
+/*SEC AGENDAMENTOS - INDEX PROFISSIONAL*/
+.titleAgendamentos {
+    margin: 15px 0px;
+}
+
+.textAgendamentos {
+    margin: 20px 0px;
+}
+
+.divTabelaAg {
+    margin: 50px 10px;
+    background-color: #0c1844bc;
+    border-radius: 20px;
+}
+
+.titleTabela {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.tabelaAg {
+    width: 100%;
+    color: #ffffff;
+    border-collapse: collapse;
+}
+
+.tabelaAg thead, tfoot {
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabelaAg th, td {
+    padding: 20px;
+    border: 1px solid #0c1844;
+}
+
+.tabelaAg thead tr th {
+    border: none;
+}
+
+.tabelaAg tfoot tr td {
+   border: none;
+}
+
+#secServicos {
+    margin: 100px 0px;
+}
+
+.titleServicos {
+    text-align: center;
+}
+
+.servicosWrapper {
+    margin: 90px 0px;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    gap: 10%;
+    justify-content: center;
+}
+
+.servico img {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+
+.pagina-texte, .section-apresentacao {
+    background-color: #236d5e;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilo para cada seção */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    height: 100vh; /* Cada seção ocupa a altura da tela */
+    color: #333;
+}
+
+.apresentacao {
+    background-color: #E6D4BD;
+}
+
+.profissionais {
+    background-color: #236d5e;
+    color: #fff;
+}
+
+.modalidade {
+    background-color: #236D5E;
+    color: #fff;
+}
+
+.agenda {
+    background-color: #236D5E;
+}
+
+/* Cabeçalho */
+.header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Profissionais Disponíveis */
+.professionals-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.professional-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #2B3550;
+    border-radius: 50%;
+}
+
+.professional-name {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Botões */
+.btn {
+    background-color: #ff6969;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Seção de Modalidade */
+.selection-section label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.selection-section select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Agenda */
+.agenda-semana {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+    .agenda-semana h2 {
+        font-size: 24px;
+    }
+
+.semana {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dia {
+    background-color: #d6ebe1;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 13%;
+}
+
+.horario {
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #663f59;
+}
+
+.botoes-acoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.botao {
+    padding: 15px 25px;
+    background-color: #3f6654;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-cancelar {
+    background-color: #823ab2;
+}
+.buttons-section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 85%; 
+    padding: 10px; 
+}
+
+.left-btn {
+    margin-right: auto; 
+}
+
+.right-btn {
+    margin-left: auto; 
+}
+
+.btn {
+    background-color: #ff6969;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

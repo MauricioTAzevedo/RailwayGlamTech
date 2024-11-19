@@ -1,0 +1,91 @@
+﻿body {
+    background-color: #FFF5E1;
+    
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0px 20px;
+}
+header .fotoPerfil{
+    display: flex;
+    justify-content: right;
+}
+header .fotoPerfil img{
+    position: absolute;
+    width: 6%;
+    border-radius:50%;
+}
+.adicionarProduto {
+    width: 15%;
+    height: auto;
+    margin-left:2vh;
+    background-color: #0C1844;
+    display: flex;
+    position: fixed;
+    top: 15%;
+    border-radius: 10px;
+    justify-content:center;
+    text-align:center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Global User Interface';
+}
+.titulo {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 15px;
+    float: right;
+    margin: 0 auto;
+}
+.titulo #titulo{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+.imagem-logo {
+    position: absolute;
+    width: 10%;
+}
+
+.linhasTabela {
+    top: 15vh;
+    position: relative;
+    background-color:#C8003699;
+    font-family: 'Global User Interface';
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    z-index: 9999;
+}
+
+.linha-produto {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.prdt-qntd {
+    position: relative;
+    top: 17vh ;
+    width: 100%;
+    border-spacing: 5px;
+}
+#titulo {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.btns-estoque {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+
+}
+
+.btn-edit {
+    background-color: #0C1844;
+    color: white;
+    outline-color: #0C1844;
+}

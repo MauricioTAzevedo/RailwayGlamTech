@@ -1,0 +1,135 @@
+@model IEnumerable<mf_dev_backend_2024.Models.Cliente>
+@{
+    Layout = "~/Views/Shared/_LayoutMenuProfissional.cshtml";
+    ViewData["Title"] = "Index";
+    ViewData["HeaderLinkAction"] = "#secAgendamentos";
+    ViewData["HeaderLinkAction2"] = "#secServicos";
+    ViewData["HeaderLinkText"] = "Agendamentos";
+    ViewData["HeaderLinkText2"] = "Serviços Disponíveis";
+}
+<body class="pagina-texte">
+    <div class="paisagem">
+        <img class="img-u" src="~/Img/imagem.svg" />
+    </div>
+
+    <!-- Seção 1 - Apresentação da Página -->
+    <section class="section-apresentacao">
+        <div class="header">
+            <h1>Bem-vindo à Nossa Equipe</h1>
+            <p>Profissionais apaixonados pela arte da beleza e pela satisfação de seus clientes</p>
+        </div>
+        <div class="section-texto">
+            <p>
+                Os profissionais que utilizam o Bellus Click são apaixonados pela arte da beleza e focados em proporcionar uma experiência de qualidade aos clientes. Com atuação em áreas como cabeleireiros, manicures, esteticistas, barbeiros e maquiadores, esses empreendedores dinâmicos, sejam autônomos ou pequenos empresários,
+                buscam crescer e otimizar a gestão de sua clientela. Valorizam a eficiência e a tecnologia prática e acessível para economizar tempo e aumentar a produtividade, confiando no Bellus Click para gerenciar agendas, atrair clientes e transformar sua rotina, permitindo que se concentrem na criação de beleza e bem-estar.
+            </p>
+        </div>
+        <section class="section-conheca">
+            <div class="header">Conheça Nossos Profissionais</div>
+        </section>
+
+        
+    </section>
+
+    <!-- Seção 2 - Profissionais Disponíveis -->
+    <section class="section profissionais">
+        <div class="header">Profissionais Disponíveis</div>
+        <div class="professionals-section">
+            <div class="professional">
+                <div class="professional-circle"></div>
+                <p class="professional-name">Ana</p>
+            </div>
+            <div class="professional">
+                <div class="professional-circle"></div>
+                <p class="professional-name">Paulo</p>
+            </div>
+            <div class="professional">
+                <div class="professional-circle"></div>
+                <p class="professional-name">Joana</p>
+            </div>
+        </div>
+        <div class="buttons-section">
+            <div class="button-group">
+                <p>Escolha o tipo do serviço</p>
+                <button class="btn left-btn">Profissionais</button>
+            </div>
+
+            <div class="button-group">
+                <p>Pesquise por profissionais próximos a sua localização</p>
+                <button class="btn right-btn">Pesquisar</button>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="buttons-section">
+            <button class="btn left-btn">Profissionais</button> 
+            <button class="btn right-btn">Pesquisar</button> 
+        </div>
+
+    </section>
+
+    <!-- Seção 3 - Seleção de Modalidade -->
+    <section class="section modalidade">
+        <div class="header">Escolha a Modalidade do Profissional</div>
+        <div class="selection-section">
+            <label for="modalidade">Modalidade:</label>
+            <select id="modalidade">
+                <option value="">Selecione uma opção</option>
+                <option value="cabelereiro">Cabeleireiro</option>
+                <option value="manicure">Manicure</option>
+                <option value="esteticista">Esteticista</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Seção 4 - Agenda da Semana -->
+    <section class="section agenda">
+        <div class="header">
+            <h1>Agenda da Semana</h1>
+        </div>
+        <div class="agenda-semana">
+            <h2>Disponibilização de Horários</h2>
+            <div class="semana">
+                <div class="dia">
+                    <h3>Segunda</h3>
+                    <div class="horario">09:00 - 10:00</div>
+                    <div class="horario">14:00 - 15:00</div>
+                </div>
+                <div class="dia">
+                    <h3>Terça</h3>
+                    <div class="horario">10:00 - 11:00</div>
+                    <div class="horario">16:00 - 17:00</div>
+                </div>
+                <div class="dia">
+                    <h3>Quarta</h3>
+                    <div class="horario">09:00 - 10:00</div>
+                    <div class="horario">13:00 - 14:00</div>
+                </div>
+                <div class="dia">
+                    <h3>Quinta</h3>
+                    <div class="horario">08:00 - 09:00</div>
+                    <div class="horario">15:00 - 16:00</div>
+                </div>
+                <div class="dia">
+                    <h3>Sexta</h3>
+                    <div class="horario">10:00 - 11:00</div>
+                    <div class="horario">17:00 - 18:00</div>
+                </div>
+                <div class="dia">
+                    <h3>Sábado</h3>
+                    <div class="horario">08:00 - 09:00</div>
+                    <div class="horario">11:00 - 12:00</div>
+                </div>
+                <div class="dia">
+                    <h3>Domingo</h3>
+                    <div class="horario">Fechado</div>
+                </div>
+            </div>
+        </div>
+        <div class="botoes-acoes">
+            <button class="botao" onclick="salvarAlteracoes()">Salvar Alterações</button>
+            <button class="botao botao-cancelar" onclick="cancelarAlteracoes()">Cancelar</button>
+        </div>
+    </section>
+</body>

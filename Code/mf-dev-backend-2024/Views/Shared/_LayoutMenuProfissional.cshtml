@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - mf_dev_backend_2024</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/mf_dev_backend_2024.styles.css" asp-append-version="true" />
+</head>
+<header class="pageHeader mb-4">
+    <div class="headerConteiner">
+        <div class="headerWrapper">
+        <div class="divLogoPrincipal wrapperItem">
+            <img src="~/img/logoPrincipal.png" id="logoPrincipal" alt="Logo Bellus Click"/>
+        </div>
+
+            <div class="divAncoras wrapperItem">
+            <div class="ancoraItem">
+                    <a class="" id="ancora1" href="@ViewData["HeaderLinkAction"]">@ViewData["HeaderLinkText"]</a>
+            </div>
+
+            <div class="ancoraItem">
+                <a class="" id="ancora2" href="@ViewData["HeaderLinkAction2"]">@ViewData["HeaderLinkText2"]</a>
+            </div>
+        </div>
+
+            <div class="divFotoPerfil wrapperItem">
+                <img src="~/img/fotoPerfil.jpg" id="fotoPerfil" alt="Foto de Perfil" />
+        </div>
+    </div>
+    </div>
+</header> 
+
+<body>
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center mt-5">
+        <div class="container">
+            &copy; 2024 - Bellus Click - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<mf_dev_backend_2024.Models.Avaliacao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Avaliações </h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Adicionar Nova Avaliação</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Comentario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nota)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agendamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nota)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agendamento.IdAgendamento)
+            </td>
+            <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.IdAvaliacao">Editar</a> |
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.IdAvaliacao">Visualizar</a> |
+                    <a class="btn btn-success" asp-action="Delete" asp-route-id="@item.IdAvaliacao">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

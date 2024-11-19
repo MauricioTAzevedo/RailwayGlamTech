@@ -1,0 +1,51 @@
+﻿@model IEnumerable<mf_dev_backend_2024.Models.Estoque>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link rel="stylesheet" href="./css/estoques.css">
+</head>
+<header> 
+    <div class="titulo">
+     <h1 id="titulo">Produtos Disponíveis</h1>
+    </div>
+     <img class="imagem-logo" src="./Img/Logo.png"> 
+     <p>
+    <a asp-action="Create" class="btn adicionarProduto">Adicionar </a>
+</p>
+    <div class="fotoPerfil">
+        <img src="./Img/fotoPerfil.jpg"> 
+    </div>
+</header>
+<table class="table">
+    <thead class="prdt-qntd">
+        <tr>
+            <th class="produto">
+                @Html.DisplayNameFor(model => model.Produto)
+            </th>
+            <th class="quantidade">
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="linhasTabela">
+            <td class="linha-produto">
+                @Html.DisplayFor(modelItem => item.Produto)
+            </td>
+            <td class="linha-quantidade">
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td class="btns-estoque">
+                <a asp-action="Edit" asp-route-id="@item.EstoqueId" class="btn btn-edit">Editar</a> 
+                <a asp-action="Details" asp-route-id="@item.EstoqueId" class="btn btn-edit">Detalhes</a> 
+                <a asp-action="Delete" asp-route-id="@item.EstoqueId" class="btn btn-edit">Apagar</a>
+            </td>
+        </tr> 
+}  
+    </tbody>
+</table>
+   

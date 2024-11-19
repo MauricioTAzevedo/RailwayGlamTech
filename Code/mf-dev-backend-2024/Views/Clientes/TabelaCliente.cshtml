@@ -1,0 +1,47 @@
+﻿@page
+@model mf_dev_backend_2024.Views.Clientes.TabelaClienteModel
+@{
+}
+   
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda do Cliente</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+        <div class="agenda-container">
+            <div class="perfil">
+                <div class="foto-perfil"></div>
+                <p class="nome">Ana</p>
+            </div>
+
+            <div class="calendario">
+                <label for="data">Outubro 2024</label>
+                <input type="date" id="data">
+            </div>
+
+            <div class="horarios">
+                <h2>Escolha o horário para o Atendimento</h2>
+                <div class="opcoes-horario">
+                    <div>
+                        <p>Manhã</p>
+                        <input type="range" min="8" max="12" value="10">
+                    </div>
+                    <div>
+                        <p>Tarde</p>
+                        <input type="range" min="12" max="18" value="14">
+                    </div>
+                    <div>
+                        <p>Noite</p>
+                        <input type="range" min="18" max="22" value="20">
+                    </div>
+                </div>
+            </div>
+
+            <button class="botao-marcar">Marcar</button>
+        </div>
+   
+
+
