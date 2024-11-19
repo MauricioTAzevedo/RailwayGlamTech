@@ -1,16 +1,14 @@
 # Imagem base para o runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
 WORKDIR /app
 EXPOSE 8080
-EXPOSE 8081
 
 # Imagem base para o SDK
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["mf-dev-backend-2024/mf-dev-backend-2024.csproj", "mf-dev-backend-2024/"]
-RUN dotnet restore "./mf-dev-backend-2024/mf-dev-backend-2024.csproj"
+RUN dotnet restore "./mf-dev-backend-2024/mf-dev-backend-2024.csproj" --no-cache
 COPY . .
 WORKDIR "/src/mf-dev-backend-2024"
 RUN dotnet build "./mf-dev-backend-2024.csproj" -c $BUILD_CONFIGURATION -o /app/build
